@@ -1,11 +1,11 @@
 name: Commit and Push From Action
 description: This is an action which can commit and push the files generated in action back to repository
 inputs:
-  github_username:
+  git_username:
     description: username from which commit is to be made
     required: true
     default: codebot
-  github_email:
+  git_email:
     description: email from which commit is to be made
     required: true
     default: codebot
@@ -21,8 +21,8 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.github_username }}
-    - ${{ inputs.github_email }}
+    - ${{ inputs.git_username }}
+    - ${{ inputs.git_email }}
     - ${{ inputs.branch }}
     - ${{ inputs.commit_message }}
 branding:

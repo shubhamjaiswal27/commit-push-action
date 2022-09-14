@@ -2,8 +2,8 @@
 
 set -e
 
-git config user.name $INPUT_GITHUB_USERNAME
-git config user.email $INPUT_GITHUB_EMAIL
+git config user.name $INPUT_GIT_USERNAME
+git config user.email $INPUT_GIT_EMAIL
 
 git add .
 git commit -m $INPUT_COMMIT_MESSAGE
